@@ -1,0 +1,197 @@
+@charset "UTF-8"
+
+html{
+	/*控制元素在移动设备上是否使用滚动回弹效果,当手指从触摸屏上移开，内容会继续保持一段时间的滚动效果。继续滚动的速度和持续的时间和滚动手势的强烈程度成正比*/
+	-webkit-overflow-scrolling:touch;
+	/* iPhone 横屏时默认会放大文字，关闭字体大小自动调整功能;initical-scale=1*/
+	-webkit-text-size-adjust:100%;
+	/*IE内核识别码*/
+	-ms-text-size-adjust:100%;
+}
+/*
+*details 描述文档或文档某个部分的细节会(出现三角形图标,如果不设置<summary></summary>则默认为详细信息,点击时出现焦点框，三角形表示下拉)
+*aside:文章以外的东西;
+*figure 文档中插图的图像，自带一个标题figcaption
+*/
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,body,h1,h2,h3,h4,h5,h6,hr,p,ul,ol,li,blockquote,dl,dt,dd,pre,fieldset,legend,button,input,textarea,form,th,td{
+	margin: 0px;
+	padding: 0px;
+	/*元素放置在父元素的基线上*/
+	vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,nav,section,hgroup,summary{
+	display: block;
+}
+
+audio,canvas,video{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+}
+
+body,button,input,textarea,select{
+	font:12px/1.5 Tahoma,Helvetica,Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+	/*不加粗*/
+	font-weight: normal;
+}
+
+address,cite,dfn,em,var,i {
+	font-style: normal
+}
+
+code,kbd,pre,samp,tt {
+	font-family: "Courier New",monospace,serif
+}
+
+small {
+	font-size: 80%
+}
+
+ul,ol{
+	list-style: none outside none;
+}
+
+ul li{
+	list-style-type: none;
+}
+
+a{
+	background-color: transparent;
+	text-decoration:none;
+	color: #000000
+}
+
+a:hover{
+	text-decoration: underline;
+	outline: 0;
+}
+
+a:active{
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus{
+	outline: 0;
+}
+/*HTML5的缩写标签 和所有浏览器支持的缩写标签*/
+abbr[title],acronym[title]{
+	border-bottom: 1px dotted;
+	cursor: help;/*光标通常是一个问号或者气球*/
+}
+/*突出显示某个文本*/
+mark{
+	background: #ff0;
+	color: #000;
+}
+/*特殊符号转换为实体符号*/
+pre{
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+/*上标和小标*/
+sub,sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+/*组合表单中的元素*/
+legend{
+	border: 0;/*虽然页面上看不见，但是占用了内存值，支持多有浏览器，均会将border边框隐藏。*/
+	padding: 0;
+	white-space: normal;
+	*margin-left: -7px;
+}
+/*fieldset与lengend组合用于组合表单中的元素*/
+fieldset,iframe {
+	border: 0 none;
+}
+
+img{
+	border: 0 none;/*兼容所有浏览器，将border-width:0,其他，颜色设置为none*/
+	vertical-align: middle;/*垂直居中*/
+	-ms-interpolation-mode: bicubic;/*实时缩放图片，解决图片缩放失真的问题 IE7*/
+}
+
+hr {
+	height: 0;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box
+}
+
+button,input,select,textarea {
+	font-family: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	*vertical-align: middle;
+}
+
+button,input[type=button],input[type=submit],input[type="reset"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+	*overflow: visible;
+}
+
+button[disabled],input[disabled] {
+	cursor: default;
+}
+/*点击某些元素出现边框的firefox的解决办法*/
+button::-moz-focus-inner,button::-moz-focus-outer,input::-moz-focus-inner,input::-moz-focus-outer {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+}
+/*appearance:button让元素看起来像一个按钮，filed呈现为输入字段*/
+input[type=search] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/*在webKit中删除搜索框按钮*/
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;/*规定用户可以调整搜索框的 vertical高度 auto 大小 horzontal 宽度*/
+}
+
+table {
+	border-collapse: collapse;/*边框合并*/
+	border-spacing: 0;/*边框的间距大小*/
+}
+
+strong {
+	font-weight: normal
+}
+
+:after,:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+
+
